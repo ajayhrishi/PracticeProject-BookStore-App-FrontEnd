@@ -18,7 +18,7 @@ const Books = () => {
 
   useEffect(() => {
     getAllBooks(); // Call the function directly
-  }, []);
+  }, [books]);
 
   console.log(books);
 
