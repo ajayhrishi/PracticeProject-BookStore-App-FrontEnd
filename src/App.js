@@ -4,7 +4,7 @@ import Header from './componenets/Header'
 import Home from './componenets/Home'
 import AboutUs from './componenets/AboutUs'
 import AddBook from './componenets/AddBook'
-import Books from './componenets/Book/Books'
+import BookDetails from './componenets/Book/BookDetails'
 const App = () => {
   return (
     <div>
@@ -15,7 +15,8 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Home/>} exact></Route>
           <Route path='/add' element={<AddBook/>} exact></Route>
-          <Route path='/books' element={<Books/>} exact></Route>
+          <Route path='/UpdateBook/:id' element={<BookDetails/>} exact></Route>
+          <Route path='/AllBooks' element={<Home/>} exact></Route>
           <Route path='/aboutUs' element={<AboutUs/>} exact></Route>
         </Routes>
       </main>

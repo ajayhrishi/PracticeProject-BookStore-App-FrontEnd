@@ -4,7 +4,7 @@ import {AppBar, Typography, Toolbar,Tabs, Tab} from '@mui/material';
 import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
 
 const Header = () => {
-    const [value,setValue]=useState();
+    const [value,setValue]=useState(0);
   return (
     <div>
       <AppBar sx={{backgroundColor:'#232F3D'}} position='sticky'> 
@@ -18,10 +18,11 @@ const Header = () => {
             indicatorColor='secondary' 
             value={value} 
             onChange={(e,val)=>{setValue(val)}} >
-
-                <Tab LinkComponent={NavLink} to='/add' label='Add Product' />
-                <Tab LinkComponent={NavLink} to='/books' label='Books'/>
-                <Tab LinkComponent={NavLink} to='/aboutUs' label='About Us'/>
+                
+                <Tab LinkComponent={NavLink} to='/AllBooks' label='Books' value={0}/>
+                <Tab LinkComponent={NavLink} to='/add' label='Add Product' value={1}/>
+                <Tab LinkComponent={NavLink} to='/aboutUs' label='About Us' value={2}/>
+               
 
             </Tabs>
         </Toolbar>
@@ -32,3 +33,6 @@ const Header = () => {
 }
 
 export default Header
+
+//
+// 
