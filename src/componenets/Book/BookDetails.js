@@ -11,7 +11,7 @@ const BookDetails = ()=>{
  console.log(id);
   useEffect(()=>{
     const fetchHandler = async()=>{
-      await axios.get(`http://127.0.0.1:5000/getBookbyID/${id}`).then(res=>res.data).then(data=>setInputs(data.book));
+      await axios.get(`http://127.0.0.1:5000/getBookbyID/${id}`).then(res=>res.data).then(data=>{setInputs(data.book); setCheck(data.book.available)});
     }
     fetchHandler();
   },[id])
