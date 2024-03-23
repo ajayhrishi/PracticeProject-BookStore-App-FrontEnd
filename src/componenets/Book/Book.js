@@ -1,6 +1,5 @@
 import React from 'react';
 import './bookStyle.css';
-import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 const Book = ({ book, onDelete }) => {
