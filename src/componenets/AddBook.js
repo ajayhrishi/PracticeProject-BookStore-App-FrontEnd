@@ -23,7 +23,7 @@ const AddBook = () => {
 
 
     const sendRequest = async() =>{
-      axios.post('http://127.0.0.1:5000/addBook',{
+      axios.post('https://book-store-backend-n1sr.onrender.com/addBook',{
         name: String(inputs.name),
         author: String(inputs.author), 
         price:Number(inputs.price),

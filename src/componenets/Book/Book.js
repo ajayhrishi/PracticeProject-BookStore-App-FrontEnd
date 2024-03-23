@@ -1,5 +1,4 @@
 import React from 'react';
-import { Button } from '@mui/material';
 import './bookStyle.css';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
@@ -24,7 +23,7 @@ const Book = ({book}) => {
   }
 
   const DeleteHandler = async() => {
-    await axios.delete(`http://127.0.0.1:5000/deleteById/${_id}`).then(res=>res.data).then(()=>history("/AllBooks"));
+    await axios.delete(`https://book-store-backend-n1sr.onrender.com/deleteById/${_id}`).then(res=>res.data).then(()=>history("/AllBooks"));
   }
 
   return (

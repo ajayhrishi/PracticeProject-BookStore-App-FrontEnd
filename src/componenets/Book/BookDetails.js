@@ -11,7 +11,7 @@ const BookDetails = ()=>{
  console.log(id);
   useEffect(()=>{
     const fetchHandler = async()=>{
-      await axios.get(`http://127.0.0.1:5000/getBookbyID/${id}`).then(res=>res.data).then(data=>{setInputs(data.book); setCheck(data.book.available)});
+      await axios.get(`https://book-store-backend-n1sr.onrender.com/getBookbyID/${id}`).then(res=>res.data).then(data=>{setInputs(data.book); setCheck(data.book.available)});
     }
     fetchHandler();
   },[id])
@@ -27,7 +27,7 @@ const BookDetails = ()=>{
   }
 
   const sendRequest = async() =>{
-    axios.put(`http://127.0.0.1:5000/updateById/${id}`,{
+    axios.put(`https://book-store-backend-n1sr.onrender.com/updateById/${id}`,{
       ...inputs,available:checked
     }).then(res=>res.data)
 

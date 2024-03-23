@@ -4,7 +4,7 @@ import axios from 'axios';
 import './bookStyle.css';
 
 const Books = () => {
-  const URL = 'http://localhost:5000/AllBooks';
+  const URL = 'https://book-store-backend-n1sr.onrender.com/AllBooks';
   const [books, setBooks] = useState([]);
 
   const getAllBooks = async () => {
