@@ -12,6 +12,9 @@ const Header = () => {
             <Typography>
                 <LibraryBooksIcon/>
             </Typography>
+            <Typography>
+            Site hosted on Render.com, data loading may take 1-3 minutes. Apologies for any inconvenience.
+            </Typography>
             <Tabs
             sx={{ml:'auto'}}
             textColor='inherit' 
